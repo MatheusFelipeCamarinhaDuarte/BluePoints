@@ -1,0 +1,39 @@
+package br.com.fiap.bluepoints.domain.entity;
+
+import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
+@Builder
+@Entity
+@Table(name = "TB_RECICLAGEM", uniqueConstraints = {
+        /**
+         * Uk para garantir que não se tenha mais de uma pessoa com o mesmo CPF.
+         */
+        @UniqueConstraint(name = "UK_TB_RECICLAGEM_CPF", columnNames = {"CPF"})
+})
+public class Reciclagem {
+    @Id
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "SQ_RECICLAGEM")
+    @SequenceGenerator(name = "SQ_RECICLAGEM")
+    @Column(name = "ID_RECICLAGEM")
+    private Long id;
+
+    @Column(name = "PONTOS")
+    private Integer pontos;
+
+    @ManyToOne(fetch = FetchType.EAGER, cascade = {CascadeType.MERGE, CascadeType.PERSIST})
+    @JoinColumn(
+            name = "FOTO",
+            referencedColumnName = "ID_FOTO",
+            foreignKey = @ForeignKey(
+                    name = "FK_RECICLAGEM_FOTO"
+            )
+    )
+    private Foto foto;
+}
