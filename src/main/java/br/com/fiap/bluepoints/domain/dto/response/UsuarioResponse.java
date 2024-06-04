@@ -1,4 +1,11 @@
 package br.com.fiap.bluepoints.domain.dto.response;
 
-public record UsuarioResponse() {
+import lombok.Builder;
+
+@Builder
+public record UsuarioResponse(
+        Long id,
+        String email,
+        PessoaResponse pessoa
+) {
 }

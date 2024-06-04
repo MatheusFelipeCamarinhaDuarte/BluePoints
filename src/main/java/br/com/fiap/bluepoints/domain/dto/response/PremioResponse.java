@@ -1,4 +1,11 @@
 package br.com.fiap.bluepoints.domain.dto.response;
 
-public record PremioResponse() {
+import lombok.Builder;
+
+@Builder
+public record PremioResponse(
+        Long id,
+        String nome,
+        Integer custo
+) {
 }

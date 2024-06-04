@@ -27,6 +27,20 @@ public class Reciclagem {
     @Column(name = "PONTOS")
     private Integer pontos;
 
+
+    @Column(name = "VALIDADO")
+    private Boolean isValidado;
+
+    @ManyToOne(fetch = FetchType.EAGER, cascade = {CascadeType.MERGE, CascadeType.PERSIST})
+    @JoinColumn(
+            name = "PESSOA",
+            referencedColumnName = "ID_PESSOA",
+            foreignKey = @ForeignKey(
+                    name = "FK_RECICLAGEM_PESSOA"
+            )
+    )
+    private Pessoa pessoa;
+
     @ManyToOne(fetch = FetchType.EAGER, cascade = {CascadeType.MERGE, CascadeType.PERSIST})
     @JoinColumn(
             name = "FOTO",
