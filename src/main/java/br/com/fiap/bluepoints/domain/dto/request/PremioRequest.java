@@ -8,6 +8,6 @@ public record PremioRequest (
         String nome,
 
         @NotNull(message = "O custo não pode ser nulo")
-        Integer pontos
+        Integer custo
 ) {
 }
