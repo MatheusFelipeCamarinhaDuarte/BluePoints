@@ -13,9 +13,9 @@ import lombok.NoArgsConstructor;
 @Entity
 @Table(name = "TB_RECICLAGEM", uniqueConstraints = {
         /**
-         * Uk para garantir que não se tenha mais de uma pessoa com o mesmo CPF.
+         * Uk para garantir que não se tenha mais de uma mesma foto.
          */
-        @UniqueConstraint(name = "UK_TB_RECICLAGEM_CPF", columnNames = {"CPF"})
+        @UniqueConstraint(name = "UK_TB_RECICLAGEM_FOTO", columnNames = {"FOTO"})
 })
 public class Reciclagem {
     @Id
