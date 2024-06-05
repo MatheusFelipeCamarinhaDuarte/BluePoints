@@ -3,7 +3,6 @@ package br.com.fiap.bluepoints.domain.entity;
 import jakarta.persistence.*;
 import lombok.*;
 
-import java.time.LocalDate;
 
 @Data
 @NoArgsConstructor
@@ -14,7 +13,7 @@ import java.time.LocalDate;
 public class Pessoa {
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "SQ_BP_PESSOA")
-    @SequenceGenerator(name = "SQ_BP_PESSOA", sequenceName = "SQ_BP_PESSOA", initialValue = 1)
+    @SequenceGenerator(name = "SQ_BP_PESSOA", sequenceName = "SQ_BP_PESSOA", allocationSize = 1)
     @Column(name = "ID_PESSOA")
     private Long id;
 

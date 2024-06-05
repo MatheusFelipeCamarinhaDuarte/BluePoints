@@ -5,7 +5,7 @@ import lombok.Builder;
 @Builder
 public record ReciclagemResponse(
         Long id,
-        Boolean isValido,
+        Boolean isValidado,
         Integer pontos,
         FotoResponse foto,
         PessoaResponse pessoa

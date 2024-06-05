@@ -20,7 +20,7 @@ import lombok.NoArgsConstructor;
 public class Reciclagem {
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "SQ_BP_RECICLAGEM")
-    @SequenceGenerator(name = "SQ_BP_RECICLAGEM", sequenceName = "SQ_BP_RECICLAGEM", initialValue = 1)
+    @SequenceGenerator(name = "SQ_BP_RECICLAGEM", sequenceName = "SQ_BP_RECICLAGEM", allocationSize = 1)
     @Column(name = "ID_RECICLAGEM")
     private Long id;
 

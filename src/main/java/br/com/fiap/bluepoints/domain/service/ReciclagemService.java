@@ -1,6 +1,8 @@
 package br.com.fiap.bluepoints.domain.service;
 
 import br.com.fiap.bluepoints.domain.dto.request.ReciclagemRequest;
+import br.com.fiap.bluepoints.domain.dto.response.FotoResponse;
+import br.com.fiap.bluepoints.domain.dto.response.PessoaResponse;
 import br.com.fiap.bluepoints.domain.dto.response.ReciclagemResponse;
 import br.com.fiap.bluepoints.domain.entity.Foto;
 import br.com.fiap.bluepoints.domain.entity.Pessoa;
@@ -49,14 +51,14 @@ public class ReciclagemService implements ServiceDTO<Reciclagem, ReciclagemReque
 
     @Override
     public ReciclagemResponse toResponse(Reciclagem e) {
-        var pessoa = pessoaService.toResponse(e.getPessoa());
-        var foto = fotoService.toResponse(e.getFoto());
+        PessoaResponse pessoa = pessoaService.toResponse(e.getPessoa());
+        FotoResponse foto = fotoService.toResponse(e.getFoto());
         return ReciclagemResponse.builder()
                 .id(e.getId())
                 .pontos(e.getPontos())
-                .isValido(e.getIsValidado())
-                .foto(foto)
+                .isValidado(e.getIsValidado())
                 .pessoa(pessoa)
+                .foto(foto)
                 .build();
     }
 

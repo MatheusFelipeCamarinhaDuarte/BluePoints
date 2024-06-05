@@ -11,7 +11,7 @@ public record ReciclagemRequest(
         Integer pontos,
 
         @AssertFalse(message = "A reciclagem tem que ser inserida como falsa")
-        boolean idValidado,
+        Boolean isValidado,
 
         @NotNull(message = "A reciclagem tem que estar ligada a alguma pessoa")
         AbstractRequest pessoa,

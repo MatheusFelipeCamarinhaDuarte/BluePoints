@@ -9,10 +9,10 @@ import org.springframework.data.domain.Example;
 import org.springframework.stereotype.Service;
 
 import java.util.Collection;
-import java.util.List;
 
 @Service
-public class FotoService implements ServiceDTO<Foto, FotoRequest, FotoResponse>{
+public class FotoService implements ServiceDTO<Foto, FotoRequest, FotoResponse> {
+
     @Autowired
     private FotoRepository repo;
 

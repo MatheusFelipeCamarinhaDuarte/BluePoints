@@ -17,7 +17,7 @@ import lombok.*;
 public class Premio {
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "SQ_BP_PREMIO")
-    @SequenceGenerator(name = "SQ_BP_PREMIO", sequenceName = "SQ_BP_PREMIO", initialValue = 1)
+    @SequenceGenerator(name = "SQ_BP_PREMIO", sequenceName = "SQ_BP_PREMIO", allocationSize = 1)
     @Column(name = "ID_PREMIO")
     private Long id;
 
