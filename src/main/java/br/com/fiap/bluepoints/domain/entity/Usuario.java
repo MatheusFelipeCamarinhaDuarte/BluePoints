@@ -11,17 +11,17 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @Builder
 @Entity
-@Table(name = "TB_USUARIO", uniqueConstraints = {
+@Table(name = "TB_BP_USUARIO", uniqueConstraints = {
         /**
          * UK para garantir que não se tenha mais usernames iguais.
          * UK para garantir que não se tenha mais de um usuario vinculado a mesma pessoa.
          */
-        @UniqueConstraint(name = "UK_USUARIO_USERNAME", columnNames = {"EMAIL"}),
+        @UniqueConstraint(name = "UK_BP_USUARIO_USERNAME", columnNames = {"EMAIL"}),
 })
 public class Usuario {
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "SQ_HEALY_USUARIO")
-    @SequenceGenerator(name = "SQ_HEALY_USUARIO")
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "SQ_BP_USUARIO")
+    @SequenceGenerator(name = "SQ_BP_USUARIO", sequenceName = "SQ_BP_USUARIO", initialValue = 1)
     @Column(name = "ID_USUARIO")
     private Long id;
 
@@ -36,7 +36,7 @@ public class Usuario {
             name = "PESSOA",
             referencedColumnName = "ID_PESSOA",
             foreignKey = @ForeignKey(
-                    name = "FK_USUARIO_PESSOA"
+                    name = "FK_BP_USUARIO_PESSOA"
             )
     )
     private Pessoa pessoa;

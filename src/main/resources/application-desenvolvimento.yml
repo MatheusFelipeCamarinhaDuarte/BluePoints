@@ -8,3 +8,8 @@ spring:
       ddl-auto: create
     show-sql: true
     open-in-view: false
+
+# swagger-ui custom path
+  springdoc:
+    swagger-ui:
+      path: /swagger-ui.html

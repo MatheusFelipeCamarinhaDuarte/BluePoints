@@ -11,16 +11,16 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @Builder
 @Entity
-@Table(name = "TB_RECICLAGEM", uniqueConstraints = {
+@Table(name = "TB_BP_RECICLAGEM", uniqueConstraints = {
         /**
          * Uk para garantir que não se tenha mais de uma mesma foto.
          */
-        @UniqueConstraint(name = "UK_TB_RECICLAGEM_FOTO", columnNames = {"FOTO"})
+        @UniqueConstraint(name = "UK_TB_BP_RECICLAGEM_FOTO", columnNames = {"FOTO"})
 })
 public class Reciclagem {
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "SQ_RECICLAGEM")
-    @SequenceGenerator(name = "SQ_RECICLAGEM")
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "SQ_BP_RECICLAGEM")
+    @SequenceGenerator(name = "SQ_BP_RECICLAGEM", sequenceName = "SQ_BP_RECICLAGEM", initialValue = 1)
     @Column(name = "ID_RECICLAGEM")
     private Long id;
 
@@ -36,7 +36,7 @@ public class Reciclagem {
             name = "PESSOA",
             referencedColumnName = "ID_PESSOA",
             foreignKey = @ForeignKey(
-                    name = "FK_RECICLAGEM_PESSOA"
+                    name = "FK_BP_RECICLAGEM_PESSOA"
             )
     )
     private Pessoa pessoa;
@@ -46,7 +46,7 @@ public class Reciclagem {
             name = "FOTO",
             referencedColumnName = "ID_FOTO",
             foreignKey = @ForeignKey(
-                    name = "FK_RECICLAGEM_FOTO"
+                    name = "FK_BP_RECICLAGEM_FOTO"
             )
     )
     private Foto foto;

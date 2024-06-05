@@ -14,12 +14,12 @@ import lombok.experimental.SuperBuilder;
 @NoArgsConstructor
 
 @Entity
-@Table(name = "TB_FOTO")
+@Table(name = "TB_BP_FOTO")
 public class Foto {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "SQ_FOTO")
-    @SequenceGenerator( name = "SQ_FOTO", sequenceName = "SQ_FOTO", allocationSize = 1)
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "SQ_BP_FOTO")
+    @SequenceGenerator( name = "SQ_BP_FOTO", sequenceName = "SQ_BP_FOTO", allocationSize = 1)
     @Column(name = "ID_FOTO")
     private Long id;
 

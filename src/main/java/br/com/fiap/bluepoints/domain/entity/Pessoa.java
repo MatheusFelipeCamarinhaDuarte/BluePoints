@@ -10,16 +10,11 @@ import java.time.LocalDate;
 @AllArgsConstructor
 @Builder
 @Entity
-@Table(name = "TB_PESSOA", uniqueConstraints = {
-        /**
-         * Uk para garantir que não se tenha mais de uma pessoa com o mesmo CPF.
-         */
-        @UniqueConstraint(name = "UK_TB_PESSOA_CPF", columnNames = {"CPF"})
-})
+@Table(name = "TB_BP_PESSOA")
 public class Pessoa {
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "SQ_PESSOA")
-    @SequenceGenerator(name = "SQ_PESSOA")
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "SQ_BP_PESSOA")
+    @SequenceGenerator(name = "SQ_BP_PESSOA", sequenceName = "SQ_BP_PESSOA", initialValue = 1)
     @Column(name = "ID_PESSOA")
     private Long id;
 
