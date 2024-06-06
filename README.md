@@ -24,26 +24,29 @@ Aplicação em desenvolvimento desde 28/03/2024*
 <a id="_Integrantes"></a>
 
 # 1 - Integrantes
-    RM: 551401  Nome: Ana Luiza Fontes Franco
-    RM: 551856  Nome: Beatriz Fon Ehnert de Santi
-    RM: 552295  Nome: Matheus Felipe Camarinha Duarte
-    RM: 98672   Nome: Mirelly Ribeiro Azevedo
-    RM: 99708   Nome: Gabriel Francisco Lobo
+    RM: 551401 Turma: 2TDSPF Nome: Ana Luiza Fontes Franco
+    RM: 551856 Turma: 2TDSPF Nome: Beatriz Fon Ehnert de Santi
+    RM: 552295 Turma: 2TDSPF Nome: Matheus Felipe Camarinha Duarte
+    RM: 98672  Turma: 2TDSPF Nome: Mirelly Ribeiro Azevedo
+    RM: 99708  Turma: 2TDSPW Nome: Gabriel Francisco Lobo
+** Verificar o [txt da equipe](documentacao%2Fequipe.txt) para consultar pontos extras.
 
 <a id="_Instruicoes"></a>
 
 # 2 - Instrucoes de como rodar a aplicação
 Enrtar em:
 
-src > main > java > br.com.fiap.healy
-
-e executar o arquivo HealyApplication.Java
-
+src > main > java > br.com.fiap.bluePoint
+e executar o arquivo bluePointApplication.Java
 O projeto estará fluindo a partir dai!
+
+[video do funcionamento do projeto]()
 
 Agora basta entrar na aplicação de mobile e fazer com que rode de forma web
 assim que rodar de forma web, a aplicação estará pronta para os demias testes
 descritos no repositório de [Mobile]()
+
+
 
 <a id="_Diagramas"></a>
 
