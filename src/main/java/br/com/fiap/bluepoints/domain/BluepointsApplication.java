@@ -4,73 +4,89 @@ import br.com.fiap.bluepoints.domain.entity.Foto;
 import br.com.fiap.bluepoints.domain.entity.Pessoa;
 import br.com.fiap.bluepoints.domain.entity.Reciclagem;
 import br.com.fiap.bluepoints.domain.entity.Usuario;
-import br.com.fiap.bluepoints.domain.repository.FotoRepository;
-import br.com.fiap.bluepoints.domain.repository.PessoaRepository;
 import br.com.fiap.bluepoints.domain.repository.ReciclagemRepository;
-import br.com.fiap.bluepoints.domain.repository.UsuarioRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.time.LocalDateTime;
+import java.util.Arrays;
+import java.util.Collection;
+
 @SpringBootApplication
 public class BluepointsApplication implements CommandLineRunner {
 
-	@Autowired
-	private PessoaRepository pessoaRepository;
+    @Autowired
+    private ReciclagemRepository reciclagemRepository;
 
-	@Autowired
-	private UsuarioRepository usuarioRepository;
 
-	@Autowired
-	private ReciclagemRepository reciclagemRepository;
+    public static void main(String[] args) {
+        SpringApplication.run(BluepointsApplication.class, args);
+    }
 
-	@Autowired
-	private FotoRepository fotoRepository;
+    @Override
+    public void run(String... args) throws Exception {
+        Collection<Reciclagem> reciclagens = criarSistema();
+        reciclagens.forEach(System.out::println);
+    }
 
-	public static void main(String[] args) {
-		SpringApplication.run(BluepointsApplication.class, args);
-	}
+    @Transactional
+    public Collection<Reciclagem> criarSistema() {
+        var qtd = reciclagemRepository.count();
+        if (qtd > 0) return null;
 
-	@Override
-	public void run(String... args) throws Exception {
-		criarSistema();
-	}
+        var matheus = Pessoa.builder()
+                .nome("MATHEUS FELIPE")
+                .sobrenome("CAMARINHA DUARTE")
+                .pontos(50000)
+                .build();
+        var foto1 = Foto.builder()
+                .src("teste/foto1.jpg")
+                .build();
+        var foto2 = Foto.builder()
+                .src("teste/foto2.jpg")
+                .build();
+        var foto3 = Foto.builder()
+                .src("teste/foto3.jpg")
+                .build();
 
-	@Transactional
-	public void criarSistema() {
-		var qtd = pessoaRepository.count();
-		if (qtd > 0) return;
+        var usuario1 = Usuario.builder()
+                .email("matheus@gmail.com")
+                .senha("matheus")
+                .pessoa(matheus)
+                .build();
 
-		var matheus = Pessoa.builder()
-				.nome("MATHEUS FELIPE")
-				.sobrenome("CAMARINHA DUARTE")
-				.pontos(50000)
-				.build();
 
-		// Salvando a pessoa para garantir que ela esteja gerenciada pelo contexto de persistência
-		pessoaRepository.save(matheus);
+        var reciclagem1 = Reciclagem.builder()
+                .usuario(usuario1)
+                .foto(foto1)
+                .pontos(0)
+                .momento(LocalDateTime.now().minusMinutes(1))
+                .build();
 
-		var foto1 = Foto.builder()
-				.src("TEStE")
-				.build();
-		fotoRepository.save(foto1); // Salvando a foto para garantir que ela esteja gerenciada
 
-		var reciclagem1 = Reciclagem.builder()
-				.pessoa(matheus)
-				.foto(foto1)
-				.pontos(0)
-				.isValidado(false)
-				.build();
-		reciclagemRepository.save(reciclagem1);
+        var reciclagem2 = Reciclagem.builder()
+                .usuario(usuario1)
+                .foto(foto2)
+                .momento(LocalDateTime.now().plusMinutes(1))
+                .pontos(10)
+                .build();
 
-		var usuario1 = Usuario.builder()
-				.email("matheus@gmail.com")
-				.senha("matheus")
-				.pessoa(matheus)
-				.build();
+        var reciclagem3 = Reciclagem.builder()
+                .usuario(usuario1)
+                .foto(foto3)
+                .momento(LocalDateTime.now().plusMinutes(2))
+                .pontos(30)
+                .build();
 
-		usuarioRepository.save(usuario1);
-	}
+        var reciclagens = Arrays.asList(reciclagem1, reciclagem2, reciclagem3);
+
+        reciclagens.forEach(r -> {
+            reciclagemRepository.saveAndFlush(r);
+        });
+
+        return reciclagens;
+    }
 }

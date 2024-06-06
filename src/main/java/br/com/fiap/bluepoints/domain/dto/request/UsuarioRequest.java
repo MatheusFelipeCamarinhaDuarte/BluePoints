@@ -16,7 +16,7 @@ public record UsuarioRequest(
         @NotNull(message = "A senha é um campo obrigatório")
         String senha,
 
-        @NotNull(message = "É necessário informar a pessoa")
+        @NotNull(message = "É necessário informar a usuario")
         AbstractRequest pessoa
 ) {
 }

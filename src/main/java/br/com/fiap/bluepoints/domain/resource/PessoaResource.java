@@ -2,9 +2,7 @@ package br.com.fiap.bluepoints.domain.resource;
 
 import br.com.fiap.bluepoints.domain.dto.request.PessoaRequest;
 import br.com.fiap.bluepoints.domain.dto.response.PessoaResponse;
-import br.com.fiap.bluepoints.domain.dto.response.PremioResponse;
 import br.com.fiap.bluepoints.domain.entity.Pessoa;
-import br.com.fiap.bluepoints.domain.entity.Premio;
 import br.com.fiap.bluepoints.domain.service.PessoaService;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;

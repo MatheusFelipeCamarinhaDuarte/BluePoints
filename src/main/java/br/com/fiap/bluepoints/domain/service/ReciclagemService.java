@@ -1,19 +1,16 @@
 package br.com.fiap.bluepoints.domain.service;
 
 import br.com.fiap.bluepoints.domain.dto.request.ReciclagemRequest;
-import br.com.fiap.bluepoints.domain.dto.response.FotoResponse;
-import br.com.fiap.bluepoints.domain.dto.response.PessoaResponse;
 import br.com.fiap.bluepoints.domain.dto.response.ReciclagemResponse;
 import br.com.fiap.bluepoints.domain.entity.Foto;
-import br.com.fiap.bluepoints.domain.entity.Pessoa;
 import br.com.fiap.bluepoints.domain.entity.Reciclagem;
-import br.com.fiap.bluepoints.domain.repository.FotoRepository;
-import br.com.fiap.bluepoints.domain.repository.PessoaRepository;
+import br.com.fiap.bluepoints.domain.entity.Usuario;
 import br.com.fiap.bluepoints.domain.repository.ReciclagemRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Example;
 import org.springframework.stereotype.Service;
 
+import java.time.LocalDateTime;
 import java.util.Collection;
 import java.util.Objects;
 
@@ -24,7 +21,7 @@ public class ReciclagemService implements ServiceDTO<Reciclagem, ReciclagemReque
     private ReciclagemRepository repo;
 
     @Autowired
-    private PessoaService pessoaService;
+    private UsuarioService usuarioService;
 
     @Autowired
     private FotoService fotoService;
@@ -32,10 +29,10 @@ public class ReciclagemService implements ServiceDTO<Reciclagem, ReciclagemReque
 
     @Override
     public Reciclagem toEntity(ReciclagemRequest dto) {
-        Pessoa pessoa = null;
+        Usuario usuario = null;
         Foto foto = null;
-        if(Objects.nonNull(dto.pessoa())){
-            pessoa = pessoaService.findById(dto.pessoa().id());
+        if(Objects.nonNull(dto.usuario())){
+            usuario = usuarioService.findById(dto.usuario().id());
         }
         if(Objects.nonNull(dto.foto())){
             foto = fotoService.findById(dto.foto().id());
@@ -43,21 +40,22 @@ public class ReciclagemService implements ServiceDTO<Reciclagem, ReciclagemReque
 
         return Reciclagem.builder()
                 .pontos(dto.pontos())
-                .isValidado(false)
+                .momento(LocalDateTime.now())
                 .foto(foto)
-                .pessoa(pessoa)
+                .usuario(usuario)
                 .build();
     }
 
     @Override
     public ReciclagemResponse toResponse(Reciclagem e) {
-        PessoaResponse pessoa = pessoaService.toResponse(e.getPessoa());
-        FotoResponse foto = fotoService.toResponse(e.getFoto());
+        var usuario = usuarioService.toResponse(e.getUsuario());
+        var foto = fotoService.toResponse(e.getFoto());
         return ReciclagemResponse.builder()
                 .id(e.getId())
                 .pontos(e.getPontos())
+                .momento(e.getMomento())
                 .isValidado(e.getIsValidado())
-                .pessoa(pessoa)
+                .usuario(usuario)
                 .foto(foto)
                 .build();
     }

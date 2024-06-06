@@ -8,7 +8,6 @@ import br.com.fiap.bluepoints.domain.entity.Pessoa;
 import br.com.fiap.bluepoints.domain.entity.Usuario;
 import br.com.fiap.bluepoints.domain.service.UsuarioService;
 import jakarta.validation.Valid;
-import org.hibernate.sql.ast.tree.expression.Collation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Example;
 import org.springframework.data.domain.ExampleMatcher;

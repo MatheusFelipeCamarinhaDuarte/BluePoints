@@ -2,9 +2,7 @@ package br.com.fiap.bluepoints.domain.resource;
 
 import br.com.fiap.bluepoints.domain.dto.request.FotoRequest;
 import br.com.fiap.bluepoints.domain.dto.response.FotoResponse;
-import br.com.fiap.bluepoints.domain.dto.response.PessoaResponse;
 import br.com.fiap.bluepoints.domain.entity.Foto;
-import br.com.fiap.bluepoints.domain.entity.Pessoa;
 import br.com.fiap.bluepoints.domain.service.FotoService;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;

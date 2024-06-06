@@ -30,16 +30,20 @@ public class ReciclagemResource implements  ResourceDTO<ReciclagemRequest, Recic
     public ResponseEntity<Collection<ReciclagemResponse>> findAll(
             @RequestParam(name = "valido",required = false) Boolean valido,
             @RequestParam(name = "pessoa.nome",required = false) String nome,
-            @RequestParam(name = "pessoa.sobrenome",required = false) String sobrenome
+            @RequestParam(name = "pessoa.sobrenome",required = false) String sobrenome,
+            @RequestParam(name = "usuario.email",required = false) String email
     ){
         Pessoa pessoa = Pessoa.builder()
                 .sobrenome(sobrenome)
                 .nome(nome)
                 .build();
-
+        Usuario usuario = Usuario.builder()
+                .email(email)
+                .pessoa(pessoa)
+                .build();
         Reciclagem reciclagem = Reciclagem.builder()
                 .isValidado(valido)
-                .pessoa(pessoa)
+                .usuario(usuario)
                 .build();
 
         ExampleMatcher matcher = ExampleMatcher

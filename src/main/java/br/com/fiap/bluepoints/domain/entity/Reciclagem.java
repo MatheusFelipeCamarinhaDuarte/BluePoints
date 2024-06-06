@@ -6,6 +6,8 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.time.LocalDateTime;
+
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
@@ -29,19 +31,22 @@ public class Reciclagem {
 
 
     @Column(name = "VALIDADO")
-    private Boolean isValidado;
+    private Boolean isValidado = false;
 
-    @ManyToOne(fetch = FetchType.EAGER)
+    @Column(name = "MOMENTO")
+    private LocalDateTime momento;
+
+    @ManyToOne(fetch = FetchType.EAGER, cascade = {CascadeType.PERSIST, CascadeType.MERGE, CascadeType.DETACH})
     @JoinColumn(
-            name = "PESSOA",
-            referencedColumnName = "ID_PESSOA",
+            name = "USUARIO",
+            referencedColumnName = "ID_USUARIO",
             foreignKey = @ForeignKey(
-                    name = "FK_BP_RECICLAGEM_PESSOA"
+                    name = "FK_BP_RECICLAGEM_USUARIO"
             )
     )
-    private Pessoa pessoa;
+    private Usuario usuario;
 
-    @ManyToOne(fetch = FetchType.EAGER)
+    @ManyToOne(fetch = FetchType.EAGER, cascade = {CascadeType.PERSIST, CascadeType.MERGE, CascadeType.DETACH})
     @JoinColumn(
             name = "FOTO",
             referencedColumnName = "ID_FOTO",
