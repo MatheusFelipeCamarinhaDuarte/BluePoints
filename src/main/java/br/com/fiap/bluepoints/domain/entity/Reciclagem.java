@@ -36,7 +36,7 @@ public class Reciclagem {
     @Column(name = "MOMENTO")
     private LocalDateTime momento;
 
-    @ManyToOne(fetch = FetchType.EAGER, cascade = {CascadeType.PERSIST, CascadeType.MERGE, CascadeType.DETACH})
+    @ManyToOne(fetch = FetchType.EAGER, cascade = {CascadeType.PERSIST, CascadeType.MERGE})
     @JoinColumn(
             name = "USUARIO",
             referencedColumnName = "ID_USUARIO",
@@ -46,7 +46,7 @@ public class Reciclagem {
     )
     private Usuario usuario;
 
-    @ManyToOne(fetch = FetchType.EAGER, cascade = {CascadeType.PERSIST, CascadeType.MERGE, CascadeType.DETACH})
+    @ManyToOne(fetch = FetchType.EAGER, cascade = {CascadeType.PERSIST, CascadeType.MERGE})
     @JoinColumn(
             name = "FOTO",
             referencedColumnName = "ID_FOTO",

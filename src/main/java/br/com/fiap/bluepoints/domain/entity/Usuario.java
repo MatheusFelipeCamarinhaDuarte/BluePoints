@@ -32,7 +32,7 @@ public class Usuario {
     @Column(name = "SENHA")
     private String senha;
 
-    @ManyToOne(fetch = FetchType.EAGER, cascade = {CascadeType.PERSIST, CascadeType.MERGE, CascadeType.DETACH})
+    @ManyToOne(fetch = FetchType.EAGER, cascade = {CascadeType.PERSIST, CascadeType.MERGE})
     @JoinColumn(
             name = "PESSOA",
             referencedColumnName = "ID_PESSOA",

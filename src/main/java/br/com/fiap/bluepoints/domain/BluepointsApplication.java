@@ -42,12 +42,15 @@ public class BluepointsApplication implements CommandLineRunner {
                 .sobrenome("CAMARINHA DUARTE")
                 .pontos(50000)
                 .build();
+
         var foto1 = Foto.builder()
                 .src("teste/foto1.jpg")
                 .build();
+
         var foto2 = Foto.builder()
                 .src("teste/foto2.jpg")
                 .build();
+
         var foto3 = Foto.builder()
                 .src("teste/foto3.jpg")
                 .build();
@@ -61,6 +64,7 @@ public class BluepointsApplication implements CommandLineRunner {
 
         var reciclagem1 = Reciclagem.builder()
                 .usuario(usuario1)
+                .isValidado(false)
                 .foto(foto1)
                 .pontos(0)
                 .momento(LocalDateTime.now().minusMinutes(1))
@@ -69,6 +73,7 @@ public class BluepointsApplication implements CommandLineRunner {
 
         var reciclagem2 = Reciclagem.builder()
                 .usuario(usuario1)
+                .isValidado(false)
                 .foto(foto2)
                 .momento(LocalDateTime.now().plusMinutes(1))
                 .pontos(10)
@@ -76,6 +81,7 @@ public class BluepointsApplication implements CommandLineRunner {
 
         var reciclagem3 = Reciclagem.builder()
                 .usuario(usuario1)
+                .isValidado(false)
                 .foto(foto3)
                 .momento(LocalDateTime.now().plusMinutes(2))
                 .pontos(30)
@@ -83,9 +89,7 @@ public class BluepointsApplication implements CommandLineRunner {
 
         var reciclagens = Arrays.asList(reciclagem1, reciclagem2, reciclagem3);
 
-        reciclagens.forEach(r -> {
-            reciclagemRepository.saveAndFlush(r);
-        });
+        reciclagemRepository.saveAll(reciclagens);
 
         return reciclagens;
     }

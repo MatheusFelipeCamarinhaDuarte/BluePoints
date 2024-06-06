@@ -41,6 +41,7 @@ public class ReciclagemService implements ServiceDTO<Reciclagem, ReciclagemReque
         return Reciclagem.builder()
                 .pontos(dto.pontos())
                 .momento(LocalDateTime.now())
+                .isValidado(false)
                 .foto(foto)
                 .usuario(usuario)
                 .build();
