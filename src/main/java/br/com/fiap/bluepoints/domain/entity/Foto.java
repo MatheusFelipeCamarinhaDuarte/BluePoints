@@ -15,12 +15,10 @@ import lombok.NoArgsConstructor;
 public class Foto {
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "SQ_BP_FOTO")
-    @SequenceGenerator( name = "SQ_BP_FOTO", sequenceName = "SQ_BP_FOTO", allocationSize = 1)
+    @SequenceGenerator(name = "SQ_BP_FOTO", sequenceName = "SQ_BP_FOTO", allocationSize = 1)
     @Column(name = "ID_FOTO")
-
     private Long id;
 
     @Column(name = "SRC")
     private String src;
-
 }

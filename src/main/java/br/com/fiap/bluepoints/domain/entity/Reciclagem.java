@@ -31,7 +31,7 @@ public class Reciclagem {
     @Column(name = "VALIDADO")
     private Boolean isValidado;
 
-    @ManyToOne(fetch = FetchType.EAGER, cascade = {CascadeType.MERGE, CascadeType.PERSIST})
+    @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(
             name = "PESSOA",
             referencedColumnName = "ID_PESSOA",
@@ -41,7 +41,7 @@ public class Reciclagem {
     )
     private Pessoa pessoa;
 
-    @ManyToOne(fetch = FetchType.EAGER, cascade = {CascadeType.MERGE, CascadeType.PERSIST})
+    @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(
             name = "FOTO",
             referencedColumnName = "ID_FOTO",

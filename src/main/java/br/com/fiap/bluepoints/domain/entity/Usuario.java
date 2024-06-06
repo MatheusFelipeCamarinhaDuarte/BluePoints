@@ -17,6 +17,7 @@ import lombok.NoArgsConstructor;
          * UK para garantir que não se tenha mais de um usuario vinculado a mesma pessoa.
          */
         @UniqueConstraint(name = "UK_BP_USUARIO_USERNAME", columnNames = {"EMAIL"}),
+        @UniqueConstraint(name = "UK_BP_USUARIO_PESSOA", columnNames = {"PESSOA"}),
 })
 public class Usuario {
     @Id
@@ -31,7 +32,7 @@ public class Usuario {
     @Column(name = "SENHA")
     private String senha;
 
-    @ManyToOne(fetch = FetchType.EAGER, cascade = {CascadeType.MERGE, CascadeType.PERSIST})
+    @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(
             name = "PESSOA",
             referencedColumnName = "ID_PESSOA",
