@@ -46,7 +46,7 @@ O projeto estará fluindo a partir daí!
 
 Agora basta entrar na aplicação de mobile e fazer com que rode de forma web
 assim que rodar de forma web, a aplicação estará pronta para os demais testes
-descritos no repositório de [Mobile]()
+descritos no repositório de [Mobile](https://github.com/aaaaaaaaana/BluePoints-Global.git)
 
 
 
