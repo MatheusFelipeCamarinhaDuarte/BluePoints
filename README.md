@@ -42,7 +42,7 @@ O projeto estará fluindo a partir daí!
 
 [vídeo do funcionamento do projeto](https://www.youtube.com/watch?v=nW9KG-lyNZM)
 
-[vídeo do funcionamento do projeto 2](https://www.youtube.com/watch?v=FpqfzviS82A)
+[vídeo do funcionamento do projeto 2](https://www.youtube.com/watch?v=mFvFRHsU8Xg)
 
 Agora basta entrar na aplicação de mobile e fazer com que rode de forma web
 assim que rodar de forma web, a aplicação estará pronta para os demais testes
@@ -71,7 +71,7 @@ descritos no repositório de [Mobile]()
 <a id="_Pitch"></a>
 
 # 4 - Nossa proposta
-[LINK]()
+[LINK](https://www.youtube.com/watch?v=mFvFRHsU8Xg)
 
 Nosso projeto se trata do uso de um aplicativo para pontuar e premiar pessoas que estão auxiliando na recolha de lixo nas praias.
 A identificação é feita com uma IA criada em Python por nós para distinguir diferentes tipos de lixo e pontuar de maneiras diferentes cada um deles.
