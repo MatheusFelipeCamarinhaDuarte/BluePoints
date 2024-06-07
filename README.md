@@ -40,7 +40,8 @@ src > main > java > br.com.fiap.bluePoint
 e executar o arquivo bluePointApplication.Java
 O projeto estará fluindo a partir dai!
 
-[video do funcionamento do projeto]()
+[video do funcionamento do projeto](https://www.youtube.com/watch?v=FpqfzviS82A)
+[video do funcionamento do projeto 2](https://www.youtube.com/watch?v=FpqfzviS82A)
 
 Agora basta entrar na aplicação de mobile e fazer com que rode de forma web
 assim que rodar de forma web, a aplicação estará pronta para os demias testes
