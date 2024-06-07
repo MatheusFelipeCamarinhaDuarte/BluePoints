@@ -40,7 +40,7 @@ src > main > java > br.com.fiap.bluePoint
 e executar o arquivo bluePointApplication.Java
 O projeto estará fluindo a partir dai!
 
-[video do funcionamento do projeto](https://www.youtube.com/watch?v=FpqfzviS82A)
+[video do funcionamento do projeto](https://www.youtube.com/watch?v=nW9KG-lyNZM)
 
 [video do funcionamento do projeto 2](https://www.youtube.com/watch?v=FpqfzviS82A)
 
