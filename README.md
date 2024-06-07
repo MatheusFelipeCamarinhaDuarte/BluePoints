@@ -36,8 +36,8 @@ Aplicação em desenvolvimento desde 28/03/2024*
 # 2 - Instrucoes de como rodar a aplicação
 Enrtar em:
 
-src > main > java > br.com.fiap.bluePoint
-e executar o arquivo bluePointApplication.Java
+src/main/java/br/com/fiap/bluepoints/domain/BluepointsApplication.java 
+e executar o arquivo [BluePointApplication.Java](src%2Fmain%2Fjava%2Fbr%2Fcom%2Ffiap%2Fbluepoints%2Fdomain%2FBluepointsApplication.java)
 O projeto estará fluindo a partir dai!
 
 [video do funcionamento do projeto](https://www.youtube.com/watch?v=nW9KG-lyNZM)
