@@ -56,7 +56,8 @@ descritos no repositório de [Mobile]()
 
 ## Diagrama do projeto Java
 
-![diagrama1.jpg](documentacao%2Fdiagramas%2Fdiagrama-bluepoints.png)
+![diagrama1.jpg](documentacao%2Fdiagrama%2Fdiagrama-bluepoints.png)
+![diagrama2.jpg](documentacao%2Fdiagrama%2Fdiagrama-de-classe.png)
 
 ## Diagrama de classe
 ![diagrama2.jpg](documentacao%2Fdiagrama%2Fdiagrama-de-classe.png)
