@@ -6,7 +6,7 @@ Nossa proposta é que com esta ferramentas pudessemos promover o aumento com o c
 
 Este projeto foi realizado juntamente a 2 colegas meus, que nos inspiramos em uma ODS (Objetivo de desenvolvimento sustentável) da ONU, para ser mais acertivo, a ODS 14, que visa conservar e usar de forma sustentável os oceanos, mares e os recursos marinhos para o desenvolvimento sustentável. Desenvolvemos este projeto ainda como formando na FIAP.
 
-Aplicação em desenvolvimento desde 28/03/2024*
+Aplicação em desenvolvimento desde 04/06/2024
 ### [Link para o GIT](https://github.com/MatheusFelipeCamarinhaDuarte/BluePoints)
 
 
