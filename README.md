@@ -1,5 +1,5 @@
 # BLUE POINT 🔵
-***Recicle nossos oceanos, você ganha, eu ganho, o mar ganha***
+***Recicle nossos oceanos, você ganha e nosso mar ganha***
 
 Este projeto nomeado de Blue point foi desenvolvido para funcionar como back-eend de um aplicativo de incentivo ao cuidado com nossos oceanos.
 Nossa proposta é que com esta ferramentas pudessemos promover o aumento com o cuidado e preservação de nossos oceanos por meio de pontos gerados ao coletar lixos e detritos das praias e levando a pontos de coleta especializados, onde seria possível escanear o material coletado e, de acordo com as normas parametrizadas em IA & Machine Learning, gerasse pontos referentes ao lixo coletado.
