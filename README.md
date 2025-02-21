@@ -1,6 +1,11 @@
 # BLUE POINT 🔵
 ***Recicle nossos oceanos, você ganha, eu ganho, o mar ganha***
 
+Este projeto nomeado de Blue point foi desenvolvido para funcionar como back-eend de um aplicativo de incentivo ao cuidado com nossos oceanos.
+Nossa proposta é que com esta ferramentas pudessemos promover o aumento com o cuidado e preservação de nossos oceanos por meio de pontos gerados ao coletar lixos e detritos das praias e levando a pontos de coleta especializados, onde seria possível escanear o material coletado e, de acordo com as normas parametrizadas em IA & Machine Learning, gerasse pontos referentes ao lixo coletado.
+
+Este projeto foi realizado juntamente a 2 colegas meus, que nos inspiramos em uma ODS (Objetivo de desenvolvimento sustentável) da ONU, para ser mais acertivo, a ODS 14, que visa conservar e usar de forma sustentável os oceanos, mares e os recursos marinhos para o desenvolvimento sustentável. Desenvolvemos este projeto ainda como formando na FIAP.
+
 Aplicação em desenvolvimento desde 28/03/2024*
 ### [Link para o GIT](https://github.com/MatheusFelipeCamarinhaDuarte/BluePoints)
 
@@ -14,7 +19,7 @@ Aplicação em desenvolvimento desde 28/03/2024*
 
 [3 - Diagramas](#_Diagramas)
 
-[4 - Nossa proposta em vídeo PITCH](#_Pitch)
+[4 - Nossa proposta](#_Pitch)
 
 [5 - Explicações de classes](#_Explicacoes)
 
@@ -24,12 +29,9 @@ Aplicação em desenvolvimento desde 28/03/2024*
 <a id="_Integrantes"></a>
 
 # 1 - Integrantes
-    RM: 551401 Turma: 2TDSPF Nome: Ana Luiza Fontes Franco
-    RM: 551856 Turma: 2TDSPF Nome: Beatriz Fon Ehnert de Santi
-    RM: 552295 Turma: 2TDSPF Nome: Matheus Felipe Camarinha Duarte
-    RM: 98672  Turma: 2TDSPF Nome: Mirelly Ribeiro Azevedo
-    RM: 99708  Turma: 2TDSPW Nome: Gabriel Francisco Lobo
-** Verificar o [txt da equipe](documentacao%2Fequipe.txt) para consultar pontos extras.
+    Matheus Felipe Camarinha Duarte (Backend - Java & Banco de dados)
+    Mirelly Ribeiro (IA & Machine Learning)
+    Macirander (Front-end/Mobile - React Native)
 
 <a id="_Instrucoes"></a>
 
@@ -38,11 +40,7 @@ Entrar em:
 
 src/main/java/br/com/fiap/bluepoints/domain/BluepointsApplication.java 
 e executar o arquivo [BluePointApplication.Java](src%2Fmain%2Fjava%2Fbr%2Fcom%2Ffiap%2Fbluepoints%2Fdomain%2FBluepointsApplication.java)
-O projeto estará fluindo a partir daí!
-
-[vídeo do funcionamento do projeto](https://www.youtube.com/watch?v=nW9KG-lyNZM)
-
-[vídeo do funcionamento do projeto 2](https://www.youtube.com/watch?v=mFvFRHsU8Xg)
+O a parte de back-end do projeto estará fluindo a partir disso!
 
 Agora basta entrar na aplicação de mobile e fazer com que rode de forma web
 assim que rodar de forma web, a aplicação estará pronta para os demais testes
